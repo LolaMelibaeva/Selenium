@@ -24,7 +24,7 @@ Quit browser*/
 		Thread.sleep(2000);
 		Alert alert=driver.switchTo().alert();
 		String alertText=alert.getText();
-		System.out.println("Text of alert test is: "+alertText);
+		System.out.println("Text of alert is: "+alertText);
 		alert.accept();
 		String expected="I am an alert box!";
 		if (alertText.equals(expected)) {
@@ -36,8 +36,8 @@ Quit browser*/
 		Thread.sleep(2000);
 		Alert alert1=driver.switchTo().alert();
 		String alertText1=alert.getText();
-		System.out.println("Text of alert test is: "+alertText1);
-		alert1.accept();
+		System.out.println("Text of alert is: "+alertText1);
+		alert1.dismiss();
 		String expected1="Press a button!";
 		if (alertText1.equals(expected1)) {
 			System.out.println("Alert box with text 'Press a button!' is present ");
@@ -48,7 +48,7 @@ Quit browser*/
 		Thread.sleep(2000);
 		Alert alert2=driver.switchTo().alert();
 		String alertText2=alert2.getText();
-		System.out.println("Text of alert test is: "+alertText2);
+		System.out.println("Text of alert is: "+alertText2);
 		alert2.accept();
 		String expected2="Please enter your name";
 		if (alertText2.equals(expected2)) {
