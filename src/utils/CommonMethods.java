@@ -1,6 +1,7 @@
 package utils;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,35 +24,40 @@ public class CommonMethods {
 	}
 		driver.get(url);
 		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 }
 	
-    public static void selectValueFromDD(WebElement element, String text) {
-        Select select = new Select(element);
-        List<WebElement> options = select.getOptions();
-        for (WebElement option : options) {
-            String optionText = option.getText();
-            if (optionText.equals(text)) {
-                select.selectByVisibleText(text);
-                break;
-            }else {
-                System.out.println("Option with text "+text+" is not available");
-            }
-        }
-    }
-
-    public static void selectValueFromDD(WebElement element, int index) {
-        Select select = new Select(element);
-        List<WebElement> options = select.getOptions();
-        if (options.size() > index) {
-            select.selectByIndex(index);
-        }else {
-            System.out.println("Invalid index has been passed");
-        }
-    }
+  
+        
+    
     
     public static void sendText(WebElement element, String value) {
         element.clear();
         element.sendKeys(value);
     }
+    
+
+	/*/ * @author Syntax 
+	 * This method will select a specified value from a drop down
+	 * @param Select element, String text
+	 */
+	public static void selectValueFromDD(WebElement element, String text) {
+		Select select = new Select(element);
+		List<WebElement> options = select.getOptions();
+		boolean isSelected=false;
+		for (WebElement option : options) {
+			String optionText = option.getText();
+			if (optionText.equals(text)) {
+				select.selectByVisibleText(text);
+				System.out.println("Option with text "+text+" is selected");
+				isSelected=true;
+				break;
+			}
+		}
+		if(!isSelected) {
+			System.out.println("Option with text +"+text+"is not available");
+		}
+	}
 }
 

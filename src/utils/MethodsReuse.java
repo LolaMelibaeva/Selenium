@@ -28,10 +28,10 @@ public class MethodsReuse {
     
     public static void browserSetUp(String broswer, String URL) {
         if(broswer.equalsIgnoreCase("chrome")){
-            System.setProperty("webdriver.chrome.driver", "/Users/Syntax/Selenium/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "src/driver/chromedriver.exe");
             driver=new ChromeDriver();
         }else if(broswer.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "/Users/Syntax/Selenium/geckodriver");
+            System.setProperty("webdriver.gecko.driver", "src/driver/geckodriver.exe");
             driver=new FirefoxDriver();
         }
         driver.get(URL);
