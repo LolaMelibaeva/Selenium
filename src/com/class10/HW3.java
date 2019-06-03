@@ -7,9 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import utils.CommonMethods2;
+import utils.CommonMethods;
 
-public class HW3 extends CommonMethods2 {
+public class HW3 extends CommonMethods {
 /*
  * TC 1: Table headers and rows verification
  * 1.Open chrome browser
@@ -23,9 +23,9 @@ public class HW3 extends CommonMethods2 {
 		String url="https://jqueryui.com";
 		
 		setUpDriver("chrome", url);
-		clickElement(driver.findElement(By.xpath("//a[text()='Datepicker']")));
+		click(driver.findElement(By.xpath("//a[text()='Datepicker']")));
 		switchToFrame(driver.findElement(By.xpath("//iframe[@class='demo-frame']")));
-		clickElement(driver.findElement(By.id("datepicker")));
+		click(driver.findElement(By.id("datepicker")));
 		
 		String xpath="//span[@class='ui-datepicker-month']";	
 		
@@ -46,6 +46,7 @@ public class HW3 extends CommonMethods2 {
 			String rowText=row.getText();
 			if(rowText.contains("10")) {
 				row.click();
+				break;
 				
 			}
 		}

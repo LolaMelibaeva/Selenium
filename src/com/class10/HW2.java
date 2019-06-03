@@ -5,9 +5,9 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import utils.CommonMethods2;
+import utils.CommonMethods;
 
-public class HW2 extends CommonMethods2{
+public class HW2 extends CommonMethods{
 /*
  * C 1: Table headers and rows verification
  * 1.Open browser and go to “http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx”
@@ -29,7 +29,7 @@ public class HW2 extends CommonMethods2{
 		sendText(driver.findElement(By.cssSelector("input[id$='username']")), "Tester");
 		sendText(driver.findElement(By.cssSelector("input[id*='password']")), "test");
 		driver.findElement(By.cssSelector("input[value='Login']")).click();
-		clickElement(driver.findElement(By.xpath("//a[text()='Order']")));
+		click(driver.findElement(By.xpath("//a[text()='Order']")));
 		selectValueFromDD(driver.findElement(By.id("ctl00_MainContent_fmwOrder_ddlProduct")),"FamilyAlbum");
 		//quantity
 		WebElement quantity=driver.findElement(By.cssSelector("input[id$='Quantity']"));
@@ -52,7 +52,7 @@ public class HW2 extends CommonMethods2{
         
         //choose CC
         WebElement chooseCC=driver.findElement(By.cssSelector("input[id$='Order_cardList_0"));
-        clickElement(chooseCC);
+        click(chooseCC);
         
         //enter CC number
         WebElement ccNumber=driver.findElement(By.cssSelector("input[id$='Order_TextBox6"));
@@ -66,10 +66,10 @@ public class HW2 extends CommonMethods2{
         Thread.sleep(2000);
         //click Proceed
         WebElement clickProceed=driver.findElement(By.cssSelector("a[id$='Order_InsertButton"));
-        clickElement(clickProceed);
+        click(clickProceed);
         
         //click View all orders
-         clickElement(driver.findElement(By.xpath("//a[text()='View all orders']")));
+         click(driver.findElement(By.xpath("//a[text()='View all orders']")));
          
          //Verify "Anna Smith" is appeared on the table
          String expectedValue="Anna Smith";
@@ -166,7 +166,7 @@ public class HW2 extends CommonMethods2{
                  
          //8.
          //click View all orders
-         clickElement(driver.findElement(By.xpath("//a[text()='View all orders']")));
+         click(driver.findElement(By.xpath("//a[text()='View all orders']")));
          
          String expectedStreet="456 Chestnut Steet";
 

@@ -5,9 +5,9 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import utils.CommonMethods2;
+import utils.CommonMethods;
 
-public class CalendarDemo extends CommonMethods2{
+public class CalendarDemo extends CommonMethods{
 
 	public static void main(String[] args) throws InterruptedException {
 		String url="https://jqueryui.com/datepicker/";

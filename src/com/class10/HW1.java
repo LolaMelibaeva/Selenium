@@ -10,9 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import utils.CommonMethods2;
+import utils.CommonMethods;
 
-public class HW1 extends CommonMethods2 {
+public class HW1 extends CommonMethods {
 /*
  *TC 1: Users Application Form Fill
  *1.Open chrome browser
@@ -28,7 +28,7 @@ public class HW1 extends CommonMethods2 {
 		
 		setUpDriver("chrome", url);
 		//click on Form linkn
-		clickElement(driver.findElement(By.xpath("//a[text()='Form']")));
+		click(driver.findElement(By.xpath("//a[text()='Form']")));
 		//enter FirstName
 		sendText(driver.findElement(By.cssSelector("input#firstname")), "Anna");
 		//enter LastName
@@ -44,7 +44,7 @@ public class HW1 extends CommonMethods2 {
 		selectValueFromDD(driver.findElement(By.xpath("//select[@class='form-control dropdown-header']")), "Denmark");
 		
 		//click Date of Birth calender
-		clickElement(driver.findElement(By.cssSelector("input#datepicker")));
+		click(driver.findElement(By.cssSelector("input#datepicker")));
 		
 		//select Month
 		selectValueFromDD(driver.findElement(By.cssSelector("select.ui-datepicker-month")), "Jun");
@@ -64,7 +64,7 @@ public class HW1 extends CommonMethods2 {
 		Thread.sleep(2000);
 		
 		//click submit button
-		clickElement(driver.findElement(By.xpath("//button[text()='Submit']")));
+		click(driver.findElement(By.xpath("//button[text()='Submit']")));
 		
 		
 			Thread.sleep(2000);
