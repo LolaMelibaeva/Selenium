@@ -18,11 +18,11 @@ public class CommonMethodsTC3 {
 
 	public static void setUpDriver(String browser, String url) {
 		if (browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "src/driver/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "src/drivers/chromedriver.exe");
 
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "src/driver/geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "src/drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else {
 			System.out.println("Browser given is wrong");

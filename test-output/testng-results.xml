@@ -2,20 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15668" started-at="2019-06-03T00:07:29Z" finished-at="2019-06-03T00:07:45Z">
+  <suite name="Default suite" duration-ms="9710" started-at="2019-09-22T17:23:20Z" finished-at="2019-09-22T17:23:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15668" started-at="2019-06-03T00:07:29Z" finished-at="2019-06-03T00:07:45Z">
-      <class name="com.class12.FlightSearch">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.class12.FlightSearch@3c130745]" name="setUp" is-config="true" duration-ms="8406" started-at="2019-06-03T00:07:29Z" finished-at="2019-06-03T00:07:38Z">
+    <test name="Default test" duration-ms="9710" started-at="2019-09-22T17:23:20Z" finished-at="2019-09-22T17:23:30Z">
+      <class name="com.class12.TaskGuru99">
+        <test-method status="PASS" signature="getMax()[pri:0, instance:com.class12.TaskGuru99@59e5ddf]" name="getMax" duration-ms="9693" started-at="2019-09-22T17:23:20Z" finished-at="2019-09-22T17:23:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="searchFlight()[pri:0, instance:com.class12.FlightSearch@3c130745]" name="searchFlight" duration-ms="7238" started-at="2019-06-03T00:07:38Z" finished-at="2019-06-03T00:07:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchFlight -->
-      </class> <!-- com.class12.FlightSearch -->
+        </test-method> <!-- getMax -->
+      </class> <!-- com.class12.TaskGuru99 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
